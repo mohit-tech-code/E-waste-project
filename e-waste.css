@@ -1,0 +1,748 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8fbf8;
+    color: #20352a;
+}
+
+:root {
+    --green: #16834b;
+    --dark-green: #105c35;
+    --light-green: #e7f5eb;
+    --white: #ffffff;
+    --text: #52665a;
+}
+
+
+/* NAVIGATION */
+
+header {
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #334b3d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.nav-btn {
+    background: var(--green);
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.tag,
+.section-heading span,
+.rewards-content > span {
+    color: var(--green);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin: 22px 0;
+    color: #163c28;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-content > p {
+    color: var(--text);
+    line-height: 1.8;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primary-btn:hover,
+.submit-btn:hover,
+.nav-btn:hover {
+    background: var(--dark-green);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 55px;
+    margin-top: 45px;
+}
+
+.hero-stats h3 {
+    color: var(--green);
+    font-size: 24px;
+}
+
+.hero-stats p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.hero-image {
+    flex: 1;
+    background: #e4f3e7;
+    min-height: 350px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.eco-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    color: var(--green);
+    font-size: 110px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+}
+
+.hero-image h2 {
+    margin-top: 25px;
+    color: var(--dark-green);
+}
+
+.hero-image p {
+    margin-top: 8px;
+    color: var(--text);
+}
+
+
+/* COMMON SECTIONS */
+
+.section {
+    padding: 75px 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin: 12px 0;
+    color: #173d29;
+}
+
+.section-heading p {
+    color: var(--text);
+}
+
+
+/* SERVICES */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    background: white;
+    padding: 28px 18px;
+    text-align: center;
+    border-radius: 13px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+.service-card h4 {
+    margin-top: 18px;
+    color: var(--green);
+    font-size: 14px;
+}
+
+
+/* BOOKING SECTION */
+
+.booking-section {
+    background: #edf6ef;
+    padding: 75px 20px;
+}
+
+.booking-container {
+    max-width: 850px;
+    background: white;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.booking-container h3 {
+    margin-bottom: 22px;
+    color: var(--dark-green);
+    font-size: 19px;
+}
+
+.item-list {
+    margin-bottom: 25px;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 10px;
+    border-bottom: 1px solid #e8eee9;
+}
+
+.item-row label {
+    font-weight: 600;
+    color: #3b5143;
+}
+
+.item-row input {
+    width: 85px;
+    padding: 10px;
+    border: 1px solid #ccd9cf;
+    border-radius: 6px;
+    outline: none;
+}
+
+.item-row input:focus {
+    border-color: var(--green);
+}
+
+.reward-preview {
+    background: #e5f5e9;
+    border: 1px solid #c6e8ce;
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.reward-preview p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.reward-preview h2 {
+    color: var(--green);
+    margin-top: 8px;
+    font-size: 28px;
+}
+
+.reward-icon {
+    font-size: 45px;
+}
+
+
+/* FORM */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 13px;
+    border: 1px solid #ccd9cf;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--green);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 28px;
+    border: none;
+    background: var(--green);
+    color: white;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text);
+    margin-top: 20px;
+}
+
+
+/* CONFIRMATION */
+
+.confirmation {
+    text-align: center;
+    padding: 25px;
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    background: #d9f3df;
+    color: var(--green);
+    font-size: 45px;
+    border-radius: 50%;
+    margin: auto auto 20px;
+    display: grid;
+    place-items: center;
+}
+
+.confirmation h2 {
+    color: var(--green);
+    margin-bottom: 12px;
+}
+
+.confirmation p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+#bookingDetails {
+    background: #f0f7f1;
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 2;
+    margin-bottom: 25px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* REWARDS SECTION */
+
+.rewards-section {
+    background: #143e29;
+    padding: 75px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    color: white;
+}
+
+.rewards-content {
+    flex: 1;
+}
+
+.rewards-content h2 {
+    font-size: 38px;
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.rewards-content > p {
+    color: #c7d9cc;
+    line-height: 1.8;
+}
+
+.points-table {
+    margin-top: 30px;
+    max-width: 450px;
+}
+
+.points-table div {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5px;
+    border-bottom: 1px solid #456b53;
+}
+
+.points-table b {
+    color: #83e5a2;
+}
+
+.reward-art {
+    flex: 1;
+    background: #e5f4e8;
+    color: var(--dark-green);
+    min-height: 300px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.big-leaf {
+    font-size: 110px;
+}
+
+.reward-art h2 {
+    font-size: 24px;
+}
+
+
+/* AWARENESS ACCORDION */
+
+.accordion {
+    max-width: 800px;
+    margin: auto;
+}
+
+.accordion-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 9px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-green);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-header span {
+    color: var(--green);
+    font-size: 22px;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+    padding: 0 20px 20px;
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 250px;
+}
+
+.awareness-note {
+    background: #e4f3e7;
+    padding: 25px;
+    margin: 35px auto 0;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.awareness-note h3 {
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.awareness-note p {
+    color: var(--text);
+    line-height: 1.7;
+}
+
+
+/* BOOKING HISTORY */
+
+.history-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 25px;
+    color: var(--text);
+    background: white;
+    border-radius: 10px;
+}
+
+.history-card {
+    background: white;
+    border-left: 4px solid var(--green);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    line-height: 1.8;
+}
+
+.history-card h3 {
+    color: var(--green);
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #102e1e;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.footer-content h2 {
+    color: #83e5a2;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    color: #c7d9cc;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.college-name {
+    margin-top: 25px !important;
+}
+
+.copyright {
+    font-size: 12px !important;
+    margin-top: 20px !important;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 950px) {
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        order: 3;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-btn {
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .booking-container {
+        padding: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .rewards-section {
+        flex-direction: column;
+        padding: 55px 25px;
+    }
+
+    .reward-art {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-row label {
+        font-size: 13px;
+    }
+
+    .hero-stats {
+        gap: 18px;
+    }
+
+    .hero-stats h3 {
+        font-size: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .rewards-content h2 {
+        font-size: 30px;
+    }
+
+}

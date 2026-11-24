@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCycle | E-Waste Recycling</title>
+
+    <link rel="stylesheet"  href="e-waste.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">♻ EcoCycle</div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Book Pickup</a></li>
+                <li><a href="#rewards">Rewards</a></li>
+                <li><a href="#awareness">Awareness</a></li>
+            </ul>
+
+            <a href="#booking" class="nav-btn">Book Now</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <span class="tag">MAKE THE EARTH GREENER</span>
+
+            <h1>Recycle Your E-Waste.<br>
+                <span>Save Our Planet.</span>
+            </h1>
+
+            <p>
+                Dispose of your old electronics responsibly.
+                Schedule a doorstep pickup and earn exciting
+                eco-reward points for every gadget recycled.
+            </p>
+
+            <a href="#booking" class="primary-btn">
+                Schedule Pickup →
+            </a>
+
+            <div class="hero-stats">
+                <div>
+                    <h3>100%</h3>
+                    <p>Eco Friendly</p>
+                </div>
+
+                <div>
+                    <h3>24/7</h3>
+                    <p>Online Booking</p>
+                </div>
+
+                <div>
+                    <h3>Earn</h3>
+                    <p>Eco Points</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="eco-circle">
+                ♻
+            </div>
+            <h2>Reduce • Reuse • Recycle</h2>
+            <p>Give your electronics a second life.</p>
+        </div>
+
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+
+        <div class="section-heading">
+            <span>OUR SERVICES</span>
+            <h2>What We Collect</h2>
+            <p>Select your electronic waste and get ready to recycle.</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Old Smartphones</h3>
+                <p>Recycle unused and damaged mobile phones.</p>
+                <h4>50 Points / Item</h4>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Laptops</h3>
+                <p>Dispose of old and non-working laptops safely.</p>
+                <h4>100 Points / Item</h4>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⌨️</div>
+                <h3>Keyboards / Mice</h3>
+                <p>Recycle old computer accessories.</p>
+                <h4>20 Points / Item</h4>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔋</div>
+                <h3>Power Banks</h3>
+                <p>Safely recycle old portable batteries.</p>
+                <h4>40 Points / Item</h4>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔌</div>
+                <h3>Cables</h3>
+                <p>Recycle damaged chargers and cables.</p>
+                <h4>10 Points / Item</h4>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+
+        <div class="section-heading">
+            <span>DOORSTEP COLLECTION</span>
+            <h2>Book Your E-Waste Pickup</h2>
+            <p>Fill in the details to schedule your recycling pickup.</p>
+        </div>
+
+        <div class="booking-container">
+
+            <form id="bookingForm">
+
+                <h3>1. Select E-Waste Items</h3>
+
+                <div class="item-list">
+
+                    <div class="item-row">
+                        <label>📱 Old Smartphones</label>
+                        <input type="number" min="0" value="0"
+                            class="quantity" data-points="50">
+                    </div>
+
+                    <div class="item-row">
+                        <label>💻 Laptops</label>
+                        <input type="number" min="0" value="0"
+                            class="quantity" data-points="100">
+                    </div>
+
+                    <div class="item-row">
+                        <label>⌨️ Keyboards / Mice</label>
+                        <input type="number" min="0" value="0"
+                            class="quantity" data-points="20">
+                    </div>
+
+                    <div class="item-row">
+                        <label>🔋 Power Banks</label>
+                        <input type="number" min="0" value="0"
+                            class="quantity" data-points="40">
+                    </div>
+
+                    <div class="item-row">
+                        <label>🔌 Cables</label>
+                        <input type="number" min="0" value="0"
+                            class="quantity" data-points="10">
+                    </div>
+
+                </div>
+
+
+                <!-- Reward Calculator -->
+                <div class="reward-preview">
+                    <div>
+                        <p>Estimated Reward Points</p>
+                        <h2 id="totalPoints">0 Points</h2>
+                    </div>
+
+                    <div class="reward-icon">🌱</div>
+                </div>
+
+
+                <h3>2. Customer Details</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="customerName">Customer Name *</label>
+                        <input type="text" id="customerName"
+                            placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Contact Number *</label>
+                        <input type="tel" id="contact"
+                            placeholder="10-digit mobile number"
+                            pattern="[6-9][0-9]{9}"
+                            maxlength="10" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Pickup Address *</label>
+                        <textarea id="address"
+                            placeholder="Enter your complete address, city and PIN code"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pickupDate">Preferred Pickup Date *</label>
+                        <input type="date" id="pickupDate" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Confirm Pickup Booking →
+                </button>
+
+                <p class="form-note">
+                    ♻ Together, let's build a cleaner and greener future!
+                </p>
+
+            </form>
+
+
+            <!-- Booking Result -->
+            <div id="confirmation" class="confirmation hidden">
+
+                <div class="success-icon">✓</div>
+
+                <h2>Booking Successful!</h2>
+
+                <p>Your e-waste pickup request has been saved.</p>
+
+                <div id="bookingDetails"></div>
+
+                <button onclick="newBooking()" class="primary-btn">
+                    Book Another Pickup
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Rewards Section -->
+    <section class="rewards-section" id="rewards">
+
+        <div class="rewards-content">
+            <span>GO GREEN, EARN REWARDS</span>
+
+            <h2>Your Small Action<br>
+                Makes a Big Difference!</h2>
+
+            <p>
+                Every electronic item you recycle helps reduce
+                pollution and earns you eco-reward points.
+            </p>
+
+            <div class="points-table">
+
+                <div><span>Smartphones</span><b>50 Points</b></div>
+                <div><span>Laptops</span><b>100 Points</b></div>
+                <div><span>Keyboards / Mice</span><b>20 Points</b></div>
+                <div><span>Power Banks</span><b>40 Points</b></div>
+                <div><span>Cables</span><b>10 Points</b></div>
+
+            </div>
+        </div>
+
+        <div class="reward-art">
+            <div class="big-leaf">🌍</div>
+            <h2>One Planet.<br>One Responsibility.</h2>
+        </div>
+
+    </section>
+
+
+    <!-- Environmental Awareness -->
+    <section class="section awareness-section" id="awareness">
+
+        <div class="section-heading">
+            <span>KNOW THE RISKS</span>
+            <h2>Why Safe E-Waste Recycling Matters</h2>
+            <p>Learn about harmful substances found in electronic waste.</p>
+        </div>
+
+        <div class="accordion">
+
+            <div class="accordion-item">
+
+                <button class="accordion-header">
+                    ☣ Lead (Pb)
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-content">
+                    <p>
+                        Lead is found in some electronic components
+                        and older circuit boards. Improper disposal
+                        can contaminate soil and water. Exposure may
+                        harm the nervous system, kidneys and other organs.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-header">
+                    ☣ Mercury (Hg)
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-content">
+                    <p>
+                        Mercury may be present in certain older
+                        displays, lamps and electronic devices.
+                        It can enter the environment through
+                        improper disposal and damage the nervous
+                        system and aquatic ecosystems.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-header">
+                    ☣ Cadmium (Cd)
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-content">
+                    <p>
+                        Cadmium is found in some rechargeable
+                        batteries and electronic components.
+                        It can contaminate soil and groundwater
+                        and may cause kidney and bone damage
+                        after long-term exposure.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="awareness-note">
+            <h3>🌱 Be Responsible!</h3>
+            <p>
+                Never throw batteries and electronic devices
+                into regular household garbage. Use authorized
+                e-waste collection and recycling channels.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Booking History -->
+    <section class="section history-section">
+
+        <div class="section-heading">
+            <span>YOUR ACTIVITY</span>
+            <h2>Recent Pickup Bookings</h2>
+            <p>Your saved bookings appear below.</p>
+        </div>
+
+        <div id="bookingHistory" class="history-container">
+            <p class="empty-message">No bookings yet. Start recycling today!</p>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+            <h2>♻ EcoCycle</h2>
+
+            <p>
+                Responsible E-Waste Management for a Sustainable Future.
+            </p>
+
+            <p class="college-name">
+                Developed as a frontend project for Lovely Professional University (LPU).
+            </p>
+
+            <p class="copyright">
+                © 2026 EcoCycle. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <script src="e-waste.js" ></script>
+
+</body>
+</html>
